@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+    }
+    #upload-form {
+      text-align: center;
+    }
+    #photo-upload {
+      margin-bottom: 20px;
+    }
+    #submit-btn {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+    #realtime-btn {
+      background-color: #008CBA;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+    #register-btn {
+      background-color: #ff9800;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Admin Dashboard</h1>
+    <form id="upload-form" action="/upload" method="post" enctype="multipart/form-data">
+      <input type="file" id="photo-upload" name="photo" accept="image/*" required>
+      <br>
+      <button type="submit" id="submit-btn">Submit</button>
+    </form>
+    <button id="realtime-btn" onclick="startRealTimeDetection()">Real-time License Plate Detection</button>
+    <button id="register-btn" onclick="redirectToRegister()">Register Vehicle Owner</button>
+  </div>
+
+  <script>
+    function startRealTimeDetection() {
+      // Add your JavaScript code for real-time license plate detection here
+      alert("Real-time license plate detection will start now!");
+    }
+
+    function redirectToRegister() {
+      // Redirect to the register vehicle owner page
+      window.location.href = "/register_vehicle_owner";
+    }
+  </script>
+
+</body>
+</html>
